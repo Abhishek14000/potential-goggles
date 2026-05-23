@@ -465,7 +465,7 @@
 
     const status = Array(questions.length).fill('unattempted');
     const answered = Array(questions.length).fill(false);
-    const intersectionThreshold = 0.35;
+    const questionVisibilityThreshold = 0.35;
 
     function openPalette() {
       palettePanel.classList.add('open');
@@ -602,7 +602,7 @@
     }
 
     function setupObserver() {
-      const observer = new IntersectionObserver(entries => {
+      const questionVisibilityObserver = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             const idx = Number(entry.target.dataset.index);
@@ -612,9 +612,9 @@
             }
           }
         });
-      }, { threshold: intersectionThreshold });
+      }, { threshold: questionVisibilityThreshold });
 
-      document.querySelectorAll('.card').forEach(card => observer.observe(card));
+      document.querySelectorAll('.card').forEach(card => questionVisibilityObserver.observe(card));
     }
 
     function updateDifficultyCounts() {
