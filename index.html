@@ -465,7 +465,7 @@
 
     const status = Array(questions.length).fill('unattempted');
     const answered = Array(questions.length).fill(false);
-    const questionVisibilityThreshold = 0.35;
+    const QUESTION_INTERSECTION_THRESHOLD = 0.35;
 
     function openPalette() {
       palettePanel.classList.add('open');
@@ -612,7 +612,7 @@
             }
           }
         });
-      }, { threshold: questionVisibilityThreshold });
+      }, { threshold: QUESTION_INTERSECTION_THRESHOLD });
 
       document.querySelectorAll('.card').forEach(card => questionVisibilityObserver.observe(card));
     }
