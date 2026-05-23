@@ -16,6 +16,9 @@
       --visited: #f9c74f;
       --unattempted: #c0c7d1;
       --shadow: 0 6px 18px rgba(24, 39, 75, 0.08);
+      --palette-top: 96px;
+      --palette-max-offset: 120px;
+      --palette-body-offset: 260px;
     }
     * { box-sizing: border-box; }
     body {
@@ -157,10 +160,10 @@
     }
     .palette-panel {
       position: fixed;
-      top: 96px;
+      top: var(--palette-top);
       right: 20px;
       width: 280px;
-      max-height: calc(100vh - 120px);
+      max-height: calc(100vh - var(--palette-max-offset));
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -210,7 +213,7 @@
     }
     .palette-body {
       overflow-y: auto;
-      max-height: calc(100vh - 260px);
+      max-height: calc(100vh - var(--palette-body-offset));
       padding-right: 4px;
     }
     .palette-grid {
@@ -462,6 +465,7 @@
 
     const status = Array(questions.length).fill('unattempted');
     const answered = Array(questions.length).fill(false);
+    const paletteVisitThreshold = 0.35;
 
     function openPalette() {
       palettePanel.classList.add('open');
@@ -608,7 +612,7 @@
             }
           }
         });
-      }, { threshold: 0.35 });
+      }, { threshold: paletteVisitThreshold });
 
       document.querySelectorAll('.card').forEach(card => observer.observe(card));
     }
