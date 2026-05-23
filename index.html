@@ -17,8 +17,8 @@
       --unattempted: #c0c7d1;
       --shadow: 0 6px 18px rgba(24, 39, 75, 0.08);
       --palette-top-spacing: 96px;
-      --palette-max-height-adjustment: 120px;
-      --palette-body-height-adjustment: 260px;
+      --palette-max-height-offset: 120px;
+      --palette-body-max-height-offset: 260px;
     }
     * { box-sizing: border-box; }
     body {
@@ -163,7 +163,7 @@
       top: var(--palette-top-spacing);
       right: 20px;
       width: 280px;
-      max-height: calc(100vh - var(--palette-max-height-adjustment));
+      max-height: calc(100vh - var(--palette-max-height-offset));
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -213,7 +213,7 @@
     }
     .palette-body {
       overflow-y: auto;
-      max-height: calc(100vh - var(--palette-body-height-adjustment));
+      max-height: calc(100vh - var(--palette-body-max-height-offset));
       padding-right: 4px;
     }
     .palette-grid {
@@ -465,7 +465,7 @@
 
     const status = Array(questions.length).fill('unattempted');
     const answered = Array(questions.length).fill(false);
-    const visitedThreshold = 0.35;
+    const intersectionThreshold = 0.35;
 
     function openPalette() {
       palettePanel.classList.add('open');
@@ -612,7 +612,7 @@
             }
           }
         });
-      }, { threshold: visitedThreshold });
+      }, { threshold: intersectionThreshold });
 
       document.querySelectorAll('.card').forEach(card => observer.observe(card));
     }
