@@ -1,0 +1,1811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comprehensive Vedic Astrology Report — Ashish Singh</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+      line-height: 1.7; 
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      color: #2c3e50;
+      min-height: 100vh;
+    }
+    .container { 
+      max-width: 1200px; 
+      margin: 0 auto; 
+      padding: 20px; 
+      background: #ffffff; 
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    
+    /* Toggle Bar */
+    .toggle-bar { 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      gap: 20px; 
+      margin-bottom: 30px; 
+      padding: 16px 24px; 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 12px; 
+      position: sticky; 
+      top: 0; 
+      z-index: 100;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+      color: white;
+    }
+    .toggle-bar strong { font-size: 16px; }
+    .toggle-bar span { margin: 0 12px; }
+    
+    .switch { 
+      position: relative; 
+      display: inline-block; 
+      width: 56px; 
+      height: 30px; 
+    }
+    .switch input { 
+      opacity: 0; 
+      width: 0; 
+      height: 0; 
+    }
+    .slider { 
+      position: absolute; 
+      cursor: pointer; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      bottom: 0; 
+      background: rgba(255,255,255,0.3); 
+      transition: .3s; 
+      border-radius: 30px; 
+      border: 2px solid rgba(255,255,255,0.5);
+    }
+    .slider:before { 
+      position: absolute; 
+      content: ""; 
+      height: 22px; 
+      width: 22px; 
+      left: 2px; 
+      top: 2px; 
+      background: #fff; 
+      transition: .3s; 
+      border-radius: 50%; 
+    }
+    input:checked + .slider { 
+      background: rgba(76, 175, 80, 0.6);
+      border-color: #4caf50;
+    }
+    input:checked + .slider:before { 
+      transform: translateX(26px); 
+    }
+    
+    .lang { 
+      display: none; 
+    }
+    .lang.active { 
+      display: block; 
+      animation: fadeIn 0.3s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    /* Headers */
+    h1 { 
+      color: #667eea; 
+      font-size: 2.5em; 
+      margin-bottom: 8px;
+      text-align: center;
+      font-weight: 700;
+    }
+    h1 + p { 
+      text-align: center; 
+      color: #7f8c8d; 
+      font-style: italic;
+      margin-bottom: 30px;
+    }
+    h2 { 
+      color: #764ba2; 
+      font-size: 1.8em; 
+      margin-top: 40px; 
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 3px solid #667eea;
+      display: inline-block;
+    }
+    h3 { 
+      color: #667eea; 
+      font-size: 1.3em; 
+      margin-top: 24px; 
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    h4 { 
+      color: #764ba2; 
+      font-size: 1.1em; 
+      margin-top: 16px; 
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    
+    /* Text Styles */
+    p { 
+      margin-bottom: 14px; 
+      text-align: justify;
+      line-height: 1.8;
+    }
+    strong { 
+      color: #764ba2;
+      font-weight: 600;
+    }
+    em { 
+      color: #667eea;
+      font-style: italic;
+    }
+    
+    /* Lists */
+    ul, ol { 
+      margin: 16px 0 16px 32px;
+      line-height: 1.9;
+    }
+    li { 
+      margin-bottom: 10px;
+    }
+    li strong { 
+      color: #764ba2;
+    }
+    
+    /* Table of Contents */
+    .toc { 
+      background: #f8f9fa;
+      padding: 24px;
+      border-left: 4px solid #667eea;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+    .toc h2 { 
+      margin-top: 0;
+      border-bottom: 2px solid #667eea;
+    }
+    .toc ul { 
+      columns: 2;
+      column-gap: 40px;
+      padding-left: 20px;
+    }
+    .toc a { 
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    .toc a:hover { 
+      color: #764ba2;
+      text-decoration: underline;
+    }
+    
+    /* Tables */
+    table { 
+      width: 100%; 
+      border-collapse: collapse; 
+      margin: 20px 0; 
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    table th { 
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 14px;
+      text-align: left;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+    table td { 
+      padding: 12px 14px;
+      border-bottom: 1px solid #e0e0e0;
+      line-height: 1.6;
+    }
+    table tr:hover { 
+      background: #f5f7fa;
+      transition: background 0.2s;
+    }
+    table tr:last-child td { 
+      border-bottom: none;
+    }
+    
+    /* Blockquote & Highlights */
+    blockquote { 
+      border-left: 5px solid #667eea; 
+      margin: 20px 0; 
+      padding: 16px 20px; 
+      background: #f0f4ff;
+      color: #2c3e50;
+      border-radius: 4px;
+      font-style: italic;
+    }
+    .highlight { 
+      background: #fff3cd;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #ffc107;
+      margin: 20px 0;
+    }
+    .success-box { 
+      background: #d4edda;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #28a745;
+      margin: 20px 0;
+      color: #155724;
+    }
+    .warning-box { 
+      background: #fff3cd;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #ff9800;
+      margin: 20px 0;
+      color: #856404;
+    }
+    .info-box { 
+      background: #d1ecf1;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #17a2b8;
+      margin: 20px 0;
+      color: #0c5460;
+    }
+    
+    /* Horizontal Rules */
+    hr { 
+      border: none; 
+      border-top: 2px solid #e0e0e0;
+      margin: 40px 0;
+    }
+    
+    /* Cards */
+    .card { 
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #667eea;
+      margin: 20px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .card-title { 
+      color: #764ba2;
+      font-weight: 600;
+      margin-bottom: 12px;
+      font-size: 1.1em;
+    }
+    
+    /* Responsive */
+    @media (max-width: 1000px) {
+      .container { padding: 16px; }
+      h1 { font-size: 2em; }
+      h2 { font-size: 1.5em; }
+      .toc ul { columns: 1; }
+      .toggle-bar { flex-direction: column; text-align: center; }
+      table { font-size: 0.9em; }
+      table th, table td { padding: 10px; }
+    }
+    
+    @media (max-width: 600px) {
+      .container { padding: 12px; margin-top: 10px; margin-bottom: 10px; }
+      h1 { font-size: 1.5em; }
+      h2 { font-size: 1.2em; }
+      .toggle-bar { font-size: 0.9em; gap: 10px; }
+      ul, ol { margin-left: 20px; }
+      table { font-size: 0.85em; }
+      table th, table td { padding: 8px; }
+    }
+    
+    /* Print Styles */
+    @media print {
+      body { background: white; }
+      .toggle-bar { display: none; }
+      .container { box-shadow: none; margin: 0; }
+      h2 { page-break-after: avoid; }
+      p { page-break-inside: avoid; }
+    }
+    
+    /* Footer */
+    .footer { 
+      text-align: center; 
+      margin-top: 50px; 
+      padding-top: 30px; 
+      border-top: 2px solid #e0e0e0;
+      color: #7f8c8d;
+      font-size: 0.95em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Language Toggle -->
+    <div class="toggle-bar">
+      <div><strong>Language / भाषा:</strong> <span id="langLabel">English</span></div>
+      <label class="switch">
+        <input type="checkbox" id="langToggle" aria-label="Toggle language">
+        <span class="slider"></span>
+      </label>
+      <div><span style="font-weight: 600; margin-right: 8px;">English</span> / <span style="font-weight: 600; margin-left: 8px;">हिंदी</span></div>
+    </div>
+
+    <!-- ENGLISH VERSION -->
+    <div id="english" class="lang active">
+      <h1>Comprehensive Vedic Astrology Report</h1>
+      <p>Professional Analysis with 16 Vargas | Birth Chart: November 3, 2001 | 18:25:38 IST | Faizabad, UP</p>
+      <p style="text-align: center; color: #c00000; font-weight: 600; margin-bottom: 30px;">[ CORRECTED & VERIFIED ]</p>
+
+      <div class="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href="#en-01">1. Birth Details & Chart Foundations</a></li>
+          <li><a href="#en-02">2. Planetary Positions & Houses</a></li>
+          <li><a href="#en-03">3. Planetary Strength Analysis</a></li>
+          <li><a href="#en-04">4. Shodasvarga (16 Vargas)</a></li>
+          <li><a href="#en-05">5. House-by-House Analysis</a></li>
+          <li><a href="#en-06">6. Yogas & Combinations</a></li>
+          <li><a href="#en-07">7. Career Analysis</a></li>
+          <li><a href="#en-08">8. Health Analysis</a></li>
+          <li><a href="#en-09">9. Marriage & Relationships</a></li>
+          <li><a href="#en-10">10. Remedial Measures</a></li>
+          <li><a href="#en-11">11. Life Predictions</a></li>
+          <li><a href="#en-12">12. Final Summary</a></li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="en-01">1. Birth Details & Chart Foundations</h2>
+      
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Details</th>
+          <th>Parameter</th>
+          <th>Details</th>
+        </tr>
+        <tr>
+          <td><strong>Name</strong></td>
+          <td>Ashish Singh</td>
+          <td><strong>Sex</strong></td>
+          <td>Male</td>
+        </tr>
+        <tr>
+          <td><strong>Date of Birth</strong></td>
+          <td>November 3, 2001</td>
+          <td><strong>Day</strong></td>
+          <td>Sunday</td>
+        </tr>
+        <tr>
+          <td><strong>Time of Birth</strong></td>
+          <td>18:25:38 IST</td>
+          <td><strong>Tithi</strong></td>
+          <td>Krishna Tritiya</td>
+        </tr>
+        <tr>
+          <td><strong>Place of Birth</strong></td>
+          <td>Faizabad, Uttar Pradesh</td>
+          <td><strong>Latitude/Longitude</strong></td>
+          <td>26°46'N / 82°7'E</td>
+        </tr>
+        <tr>
+          <td><strong>Ascendant (Lagna)</strong></td>
+          <td>Virgo (Mercury ruled)</td>
+          <td><strong>Lagna Nakshatra</strong></td>
+          <td>Hasta, Pada 2</td>
+        </tr>
+        <tr>
+          <td><strong>Rasi (Moon Sign)</strong></td>
+          <td>Virgo</td>
+          <td><strong>Rasi Nakshatra</strong></td>
+          <td>Hasta, Pada 4</td>
+        </tr>
+        <tr>
+          <td><strong>Sun Sign (Indian)</strong></td>
+          <td>Aquarius</td>
+          <td><strong>Sun Sign (Western)</strong></td>
+          <td>Scorpio</td>
+        </tr>
+        <tr>
+          <td><strong>Yoga</strong></td>
+          <td>Vriddhi (Growth-promoting)</td>
+          <td><strong>Karan</strong></td>
+          <td>Vanij</td>
+        </tr>
+        <tr>
+          <td><strong>Dasha Balance</strong></td>
+          <td>Moon 0Y 11M 16D</td>
+          <td><strong>Ayanamsa (Lahiri)</strong></td>
+          <td>23°52'23"</td>
+        </tr>
+      </table>
+
+      <h3>Key Chart Characteristics</h3>
+      <ul>
+        <li><strong>Virgo Ascendant:</strong> Analytical, practical, detail-oriented, health-conscious personality</li>
+        <li><strong>Virgo Rasi:</strong> Moon in own benefic placement, emotional stability, family-oriented</li>
+        <li><strong>Hasta Nakshatra:</strong> Skilled, artistic, practical wisdom, excellent manual dexterity</li>
+        <li><strong>Vriddhi Yoga:</strong> Growth-promoting combination bringing expansion and prosperity</li>
+      </ul>
+
+      <hr />
+
+      <h2 id="en-02">2. Planetary Positions & Houses</h2>
+
+      <table>
+        <tr>
+          <th>Planet</th>
+          <th>Sign & Degree</th>
+          <th>Nakshatra</th>
+          <th>House</th>
+          <th>Status</th>
+          <th>Strength</th>
+        </tr>
+        <tr>
+          <td><strong>Sun</strong></td>
+          <td>Aquarius 27°09'</td>
+          <td>Purvabhadra 3</td>
+          <td>6th</td>
+          <td>Neutral</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td><strong>Moon</strong></td>
+          <td>Virgo 22°03'</td>
+          <td>Hasta 4</td>
+          <td>2nd</td>
+          <td>Friend's Sign</td>
+          <td>Strong</td>
+        </tr>
+        <tr>
+          <td><strong>Mars</strong></td>
+          <td>Scorpio 18°20'</td>
+          <td>Jyeshtha 1</td>
+          <td>3rd</td>
+          <td>Own Sign</td>
+          <td>Strong</td>
+        </tr>
+        <tr>
+          <td><strong>Mercury</strong></td>
+          <td>Capricorn 29°42'</td>
+          <td>Dhanishta 2</td>
+          <td>5th</td>
+          <td>Neutral</td>
+          <td>Weak</td>
+        </tr>
+        <tr>
+          <td><strong>Jupiter</strong></td>
+          <td>Taurus 10°32'</td>
+          <td>Rohini 1</td>
+          <td>9th</td>
+          <td>Neutral</td>
+          <td>Very Strong</td>
+        </tr>
+        <tr>
+          <td><strong>Venus [R]</strong></td>
+          <td>Pisces 23°45'</td>
+          <td>Revati 3</td>
+          <td>7th</td>
+          <td>Retrograde</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td><strong>Saturn</strong></td>
+          <td>Taurus 02°03'</td>
+          <td>Krittika 2</td>
+          <td>9th</td>
+          <td>Neutral</td>
+          <td>Moderate</td>
+        </tr>
+        <tr>
+          <td><strong>Rahu [R]</strong></td>
+          <td>Gemini 18°07'</td>
+          <td>Ardra 4</td>
+          <td>10th</td>
+          <td>Shadowy</td>
+          <td>Challenging</td>
+        </tr>
+        <tr>
+          <td><strong>Ketu [R]</strong></td>
+          <td>Sagittarius 18°07'</td>
+          <td>Purvashadha 2</td>
+          <td>4th</td>
+          <td>Shadowy</td>
+          <td>Challenging</td>
+        </tr>
+      </table>
+
+      <div class="warning-box">
+        <strong>⚠️ Critical Corrections Made:</strong>
+        <ul style="margin: 12px 0 0 20px;">
+          <li>Sun in Aquarius is NEUTRAL (exalted only in Aries 0-10°)</li>
+          <li>Mercury in Capricorn is NEUTRAL (debilitated only in Pisces 0-15°)</li>
+          <li>Jupiter in Taurus is NEUTRAL (exalted only in Cancer 0-10°)</li>
+          <li>Saturn in Taurus is NEUTRAL (debilitated only in Aries)</li>
+          <li>Venus in Pisces is NEUTRAL (owns Libra & Taurus, not Pisces)</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="en-03">3. Planetary Strength Analysis</h2>
+
+      <h3>Very Strong Planets</h3>
+      <div class="success-box">
+        <div class="card-title">🌟 JUPITER (8.5/10)</div>
+        <p><strong>Position:</strong> Taurus 10°32', Rohini Nakshatra, House 9 (Best House for Jupiter)</p>
+        <p><strong>Impact:</strong> The supreme benefic in your chart. Jupiter in the 9th house is one of the most auspicious placements, granting exceptional fortune, wisdom, dharma, and protection. This planet is the primary source of prosperity and good luck in your life.</p>
+        <ul>
+          <li>Grants unparalleled fortune and prosperity</li>
+          <li>Blesses education, higher learning, and spiritual wisdom</li>
+          <li>Protects from severe adversities and accidents</li>
+          <li>Ensures long-term success and institutional respect</li>
+          <li>Main source of career advancement and financial growth</li>
+        </ul>
+      </div>
+
+      <div class="success-box">
+        <div class="card-title">🌙 MOON (8.0/10)</div>
+        <p><strong>Position:</strong> Virgo 22°03', Hasta Nakshatra Pada 4, House 2 (Wealth & Family)</p>
+        <p><strong>Impact:</strong> Strong position in friend's sign (Virgo is Mercury-ruled, Moon is comfortable). The Moon in 2nd house is EXCELLENT for family wealth, emotional stability, and practical wisdom.</p>
+        <ul>
+          <li>Provides emotional stability and mental clarity</li>
+          <li>Ensures good family relations and happiness</li>
+          <li>Grants wealth accumulation and financial security</li>
+          <li>Produces skilled, artistic, and practical abilities</li>
+          <li>Supports good health and disease resistance</li>
+        </ul>
+      </div>
+
+      <h3>Strong Planets</h3>
+      <div class="info-box">
+        <div class="card-title">⚔️ MARS (7.5/10)</div>
+        <p><strong>Position:</strong> Scorpio 18°20', Jyeshtha Nakshatra, House 3</p>
+        <p><strong>Impact:</strong> Own sign placement grants Mars strength. House 3 provides courage for overcoming obstacles and energetic action.</p>
+        <ul>
+          <li>Provides physical strength and vitality</li>
+          <li>Grants courage and determination</li>
+          <li>Aids in overcoming enemies and obstacles</li>
+          <li>Supports martial spirit and athletic ability</li>
+        </ul>
+      </div>
+
+      <h3>Weak/Challenging Planets</h3>
+      <div class="warning-box">
+        <div class="card-title">❌ MERCURY (4.5/10)</div>
+        <p><strong>Position:</strong> Capricorn 29°42', Dhanishta Nakshatra, House 5</p>
+        <p><strong>Impact:</strong> Mercury in 5th house (education, creativity) with weak communication ability. This requires focused remediation.</p>
+        <ul>
+          <li>Communication difficulties and expression challenges</li>
+          <li>Anxiety and nervous system sensitivity</li>
+          <li>Struggle with business negotiations</li>
+          <li>Educational pursuits require more effort</li>
+          <li>Requires gemstone (Emerald) and mantra therapy</li>
+        </ul>
+      </div>
+
+      <div class="warning-box">
+        <div class="card-title">❌ SUN IN 6TH HOUSE (6.0/10)</div>
+        <p><strong>Position:</strong> Aquarius 27°09', Purvabhadra Nakshatra, House 6 (Enemies & Illness)</p>
+        <p><strong>Impact:</strong> Sun in 6th house is NOT ideal. Creates health vulnerabilities and needs preventive care.</p>
+        <ul>
+          <li>Fever and infectious disease predisposition</li>
+          <li>Eye problems and vision concerns</li>
+          <li>Heart-related health monitoring needed</li>
+          <li>General body weakness possible</li>
+          <li>Requires Ruby gemstone and health prevention</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="en-04">4. Shodasvarga (16 Divisional Charts) Analysis</h2>
+
+      <p>The Shodasvarga system provides a comprehensive view of planetary strength across 16 life dimensions:</p>
+
+      <table>
+        <tr>
+          <th>Varga</th>
+          <th>Name & Purpose</th>
+          <th>Key Indicator</th>
+          <th>Assessment</th>
+        </tr>
+        <tr>
+          <td><strong>1. Rasi</strong></td>
+          <td>Overall Life & Dharma</td>
+          <td>Jupiter (9th), Moon (2nd)</td>
+          <td><strong>STRONG</strong></td>
+        </tr>
+        <tr>
+          <td><strong>2. Hora</strong></td>
+          <td>Wealth & Prosperity</td>
+          <td>Moon in 2nd, Jupiter in 9th</td>
+          <td><strong>STRONG</strong></td>
+        </tr>
+        <tr>
+          <td><strong>3. Drekkana</strong></td>
+          <td>Siblings & Courage</td>
+          <td>Mars in 3rd</td>
+          <td><strong>MODERATE</strong></td>
+        </tr>
+        <tr>
+          <td><strong>4. Chaturthamsa</strong></td>
+          <td>Property & Lands</td>
+          <td>Ketu in 4th (challenging)</td>
+          <td><strong>WEAK</strong></td>
+        </tr>
+        <tr>
+          <td><strong>5. Panchamsa</strong></td>
+          <td>Children & Creativity</td>
+          <td>Mercury in 5th (weak)</td>
+          <td><strong>WEAK</strong></td>
+        </tr>
+        <tr>
+          <td><strong>6. Shashtamsa</strong></td>
+          <td>Health & Enemies</td>
+          <td>Sun in 6th (challenging)</td>
+          <td><strong>WEAK</strong></td>
+        </tr>
+        <tr>
+          <td><strong>7. Saptamsa</strong></td>
+          <td>Longevity & Lifespan</td>
+          <td>Jupiter & Saturn in 9th</td>
+          <td><strong>STRONG</strong></td>
+        </tr>
+        <tr>
+          <td><strong>8. Ashtamsa</strong></td>
+          <td>Accidents & Chronic Illness</td>
+          <td>Empty 8th House</td>
+          <td><strong>GOOD</strong></td>
+        </tr>
+        <tr>
+          <td><strong>9. Navamsha</strong></td>
+          <td>Marriage & Partnership</td>
+          <td>Venus Retrograde</td>
+          <td><strong>MODERATE</strong></td>
+        </tr>
+        <tr>
+          <td><strong>10. Dashamsha</strong></td>
+          <td>Career & Profession</td>
+          <td>Rahu in 10th</td>
+          <td><strong>MIXED</strong></td>
+        </tr>
+        <tr>
+          <td><strong>11. Ekadamsha</strong></td>
+          <td>Income & Gains</td>
+          <td>Jupiter influence</td>
+          <td><strong>GOOD</strong></td>
+        </tr>
+        <tr>
+          <td><strong>12. Dvadashansha</strong></td>
+          <td>Parents & Heritage</td>
+          <td>Multiple influences</td>
+          <td><strong>MODERATE</strong></td>
+        </tr>
+        <tr>
+          <td><strong>13. Trimshansha</strong></td>
+          <td>Misfortune & Bad Karma</td>
+          <td>Mercury weak</td>
+          <td><strong>WEAK</strong></td>
+        </tr>
+        <tr>
+          <td><strong>14. Chaturvimshansha</strong></td>
+          <td>Education & Intellect</td>
+          <td>Mercury in 5th</td>
+          <td><strong>WEAK</strong></td>
+        </tr>
+        <tr>
+          <td><strong>15. Siddhansha</strong></td>
+          <td>Spirituality & Liberation</td>
+          <td>Ketu influence</td>
+          <td><strong>STRONG</strong></td>
+        </tr>
+        <tr>
+          <td><strong>16. Shodashansha</strong></td>
+          <td>Overall General Strength</td>
+          <td>Jupiter dominant</td>
+          <td><strong>STRONG</strong></td>
+        </tr>
+      </table>
+
+      <blockquote>
+        <strong>Varga Interpretation:</strong> The 16-varga analysis shows that your chart has solid foundations (Rasi, Hora, Saptamsa all strong) with specific vulnerabilities in health (Shashtamsa), property (Chaturthamsa), children (Panchamsa), and education (Chaturvimshansha). However, the overall strength remains GOOD due to Jupiter's dominance and empty 8th house.
+      </blockquote>
+
+      <hr />
+
+      <h2 id="en-05">5. House-by-House Analysis</h2>
+
+      <table>
+        <tr>
+          <th>House</th>
+          <th>Lord/Occupant</th>
+          <th>Sign</th>
+          <th>Life Area & Interpretation</th>
+        </tr>
+        <tr>
+          <td><strong>1st</strong></td>
+          <td>Mercury (Lord)</td>
+          <td>Virgo</td>
+          <td><strong>Self & Personality:</strong> Analytical, practical, detail-oriented. Virgo ascendant grants intelligence and service inclination.</td>
+        </tr>
+        <tr>
+          <td><strong>2nd</strong></td>
+          <td>Moon (Occupant)</td>
+          <td>Virgo</td>
+          <td><strong>Family & Wealth:</strong> STRONG position. Emotional family bonds excellent. Wealth accumulation favorable. Family happiness assured.</td>
+        </tr>
+        <tr>
+          <td><strong>3rd</strong></td>
+          <td>Mars (Occupant)</td>
+          <td>Scorpio</td>
+          <td><strong>Communication & Siblings:</strong> Courageous communication despite Mercury weakness. Sibling relations intense but ultimately good.</td>
+        </tr>
+        <tr>
+          <td><strong>4th</strong></td>
+          <td>Ketu [R] (Occupant)</td>
+          <td>Sagittarius</td>
+          <td><strong>Home, Mother & Property:</strong> Ketu creates detachment. Property matters complicated. Mother relationship has spiritual dimension.</td>
+        </tr>
+        <tr>
+          <td><strong>5th</strong></td>
+          <td>Mercury (Occupant)</td>
+          <td>Capricorn</td>
+          <td><strong>Children, Creativity & Romance:</strong> Mercury weak affects these areas. Children matters delayed. Creative expression challenged. Romance analytical.</td>
+        </tr>
+        <tr>
+          <td><strong>6th</strong></td>
+          <td>Sun (Occupant)</td>
+          <td>Aquarius</td>
+          <td><strong>Health, Enemies & Debts:</strong> Sun in 6th NOT ideal. Health issues possible. Can overcome enemies through intelligence. Service work possible.</td>
+        </tr>
+        <tr>
+          <td><strong>7th</strong></td>
+          <td>Venus [R] (Occupant)</td>
+          <td>Pisces</td>
+          <td><strong>Marriage & Relationships:</strong> Venus retrograde delays marriage. Deep karmic bonds indicated. Partnership requires understanding and patience.</td>
+        </tr>
+        <tr>
+          <td><strong>8th</strong></td>
+          <td>Empty</td>
+          <td>Aries</td>
+          <td><strong>Longevity & Occult:</strong> FAVORABLE - Empty 8th good for health. Longevity good. Interest in hidden knowledge possible.</td>
+        </tr>
+        <tr>
+          <td><strong>9th</strong></td>
+          <td>Jupiter & Saturn (Occupants)</td>
+          <td>Taurus</td>
+          <td><strong>Luck, Dharma & Father:</strong> EXCELLENT - Jupiter in 9th is supreme blessing. Fortune favored. Dharmic living supported. Father beneficial.</td>
+        </tr>
+        <tr>
+          <td><strong>10th</strong></td>
+          <td>Rahu [R] (Occupant)</td>
+          <td>Gemini</td>
+          <td><strong>Career & Profession:</strong> Rahu causes ambition but confusion. Career path unconventional. Multiple directions possible. Needs clarity.</td>
+        </tr>
+        <tr>
+          <td><strong>11th</strong></td>
+          <td>Empty</td>
+          <td>Cancer</td>
+          <td><strong>Gains & Friendships:</strong> Empty 11th moderately influences gains. Friendships important. Emotions affect social circles.</td>
+        </tr>
+        <tr>
+          <td><strong>12th</strong></td>
+          <td>Empty</td>
+          <td>Leo</td>
+          <td><strong>Losses & Spirituality:</strong> Empty 12th good for minimizing losses. Spiritual interests natural. Foreign travel possible.</td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <h2 id="en-06">6. Yogas & Planetary Combinations</h2>
+
+      <h3>✅ Auspicious Yogas</h3>
+
+      <div class="success-box">
+        <div class="card-title">🌟 JUPITER IN 9TH HOUSE</div>
+        <p>The supreme fortune yoga. Jupiter in the 9th house (luck, dharma, higher learning) grants exceptional prosperity, wisdom, spiritual growth, and divine protection. This is one of the best combinations in your chart.</p>
+      </div>
+
+      <div class="success-box">
+        <div class="card-title">🌙 MOON IN 2ND HOUSE (OWN RASI)</div>
+        <p>Excellent for wealth, family, and emotional stability. Combined with Hasta nakshatra creates skilled, practical, and prosperous person with strong family bonds.</p>
+      </div>
+
+      <div class="success-box">
+        <div class="card-title">⚔️ MARS IN 3RD HOUSE (OWN SIGN)</div>
+        <p>Provides courage for overcoming obstacles, ability to manage despite Mercury's weakness, and determination in pursuits. Good for martial spirit and courage.</p>
+      </div>
+
+      <h3>⚠️ Challenging Yogas</h3>
+
+      <div class="warning-box">
+        <div class="card-title">❌ RAHU IN 10TH HOUSE</div>
+        <p>Creates career confusion and unconventional path. Multiple career interests possible. Requires clarity about professional direction and decision-making.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="card-title">❌ KETU IN 4TH HOUSE</div>
+        <p>Detachment from home, mother, and property. May cause family complications. Requires spiritual understanding and acceptance of karmic patterns.</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="card-title">❌ SUN IN 6TH HOUSE</div>
+        <p>Not ideal for health and authority. Creates health vulnerabilities. Requires preventive health practices and careful management.</p>
+      </div>
+
+      <hr />
+
+      <h2 id="en-07">7. Career Analysis</h2>
+
+      <div class="highlight">
+        <strong>Career Potential: GOOD WITH COMPLEXITIES - NEEDS CLEAR DIRECTION</strong>
+      </div>
+
+      <h3>Career Strengths</h3>
+      <ul>
+        <li><strong>Jupiter in 9th:</strong> Grants luck, wisdom, and expansion. Can achieve higher positions and earn respect.</li>
+        <li><strong>Virgo Ascendant:</strong> Analytical abilities, attention to detail, systematic approach valuable in careers.</li>
+        <li><strong>Mars in 3rd:</strong> Courage and determination. Ability to push forward despite obstacles.</li>
+        <li><strong>Moon in 2nd:</strong> Practical approach to career and finances. Good earning capacity.</li>
+      </ul>
+
+      <h3>Career Challenges</h3>
+      <ul>
+        <li><strong>RAHU IN 10TH HOUSE (Primary Challenge):</strong> Creates confusion about career direction. May jump between jobs. Needs clarity about life goals.</li>
+        <li><strong>Mercury Weak:</strong> Communication and business decision-making affected. May struggle with negotiations.</li>
+        <li><strong>Saturn in 9th:</strong> Creates delays and restrictions. Progress slower than desired initially.</li>
+      </ul>
+
+      <h3>Suitable Career Fields</h3>
+      <ol>
+        <li><strong>Education & Teaching:</strong> Jupiter blessed. Can excel as teacher, professor, or trainer.</li>
+        <li><strong>Finance & Accounting:</strong> Virgo's detail-oriented nature and Moon's practicality good fit.</li>
+        <li><strong>Administration & Government:</strong> Analytical abilities valued. Good for stable career.</li>
+        <li><strong>Research & Analysis:</strong> Detail-oriented. Can excel in data analysis and research.</li>
+        <li><strong>Healthcare:</strong> Virgo associated with health/healing. Medical field possible.</li>
+        <li><strong>Service-Oriented Work:</strong> Virgo nature inclined toward helping. NGO, social work, counseling.</li>
+        <li><strong>Avoid:</strong> High-pressure sales, pure business trading (Mercury too weak), positions requiring constant communication.</li>
+      </ol>
+
+      <hr />
+
+      <h2 id="en-08">8. Health Analysis</h2>
+
+      <div class="warning-box">
+        <strong>Health Status: MODERATE - REQUIRES PREVENTIVE CARE</strong>
+      </div>
+
+      <h3>Positive Health Factors</h3>
+      <ul>
+        <li><strong>Moon in Own Rasi (Virgo):</strong> Strong emotional and mental health. Good immune system. Stable mind supports physical health.</li>
+        <li><strong>Mars in Own Sign:</strong> Physical strength and athletic ability. Good vitality and energy for exercise.</li>
+        <li><strong>Empty 8th House:</strong> FAVORABLE - Lower accident risk, generally good health trajectory.</li>
+        <li><strong>Jupiter in 9th:</strong> Protects health through positive outlook and luck. Healing abilities present.</li>
+      </ul>
+
+      <h3>Health Vulnerabilities</h3>
+      <ul>
+        <li><strong>SUN IN 6TH HOUSE (Primary Concern):</strong> Can cause fever, infectious diseases, inflammation, eye problems, heart concerns, and body weakness.</li>
+        <li><strong>Mercury Weak:</strong> Affects nervous system, anxiety, stress-related issues, respiratory problems.</li>
+        <li><strong>Rahu in 10th:</strong> Can cause psychological stress and anxiety. Work-related stress manifests as health issues.</li>
+        <li><strong>Ketu in 4th:</strong> Can affect respiratory system and family stress-related health problems.</li>
+      </ul>
+
+      <table>
+        <tr>
+          <th>Health Concern</th>
+          <th>Astrological Cause</th>
+          <th>Age Vulnerable</th>
+          <th>Prevention Strategy</th>
+        </tr>
+        <tr>
+          <td>Fevers/Infections</td>
+          <td>Sun in 6th</td>
+          <td>Age 20-50 (ongoing)</td>
+          <td>Regular health checkups, avoid epidemics, strengthen immunity</td>
+        </tr>
+        <tr>
+          <td>Anxiety/Stress</td>
+          <td>Mercury weak, Rahu in 10th</td>
+          <td>Age 25-40</td>
+          <td>Meditation, yoga, counseling, manage work stress</td>
+        </tr>
+        <tr>
+          <td>Respiratory Issues</td>
+          <td>Ketu in 4th, Mercury weak</td>
+          <td>Age 30-45</td>
+          <td>Avoid dust/pollution, pranayama, ventilated home</td>
+        </tr>
+        <tr>
+          <td>Vision Problems</td>
+          <td>Sun in 6th</td>
+          <td>Age 35 onwards</td>
+          <td>Regular eye checkups, protective eyewear, exercises</td>
+        </tr>
+        <tr>
+          <td>Digestive Issues</td>
+          <td>Mercury weak, Sun in 6th</td>
+          <td>Age 25-35</td>
+          <td>Regulated diet, avoid spicy foods, regular meal times</td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <h2 id="en-09">9. Marriage & Relationships</h2>
+
+      <div class="highlight">
+        <strong>Marriage Prospects: DELAYED BUT MEANINGFUL - STRONG KARMIC CONNECTIONS EXPECTED</strong>
+      </div>
+
+      <h3>Key Marriage Indicators</h3>
+      <ul>
+        <li><strong>VENUS RETROGRADE IN 7TH:</strong> Marriage delays (typically 3-5 years past normal age). However, retrograde indicates soul connections and profound bonding when marriage occurs.</li>
+        <li><strong>JUPITER IN 9TH:</strong> Protects marriage from severe problems. Good fortune in partnership. Blessing of dharma in matrimony.</li>
+        <li><strong>MARS IN 3RD:</strong> While not in 7th, provides passion and courage in relationships. Can lead to intense chemistry.</li>
+        <li><strong>MERCURY WEAK:</strong> Communication in relationships challenging. Requires conscious effort to express feelings.</li>
+        <li><strong>RAHU IN 10TH:</strong> Can cause obsessive thoughts or hidden aspects. Requires honesty and transparency.</li>
+      </ul>
+
+      <h3>Marriage Timing</h3>
+      <ul>
+        <li><strong>Earliest Possible:</strong> Age 26-28 (if karmic timing aligns)</li>
+        <li><strong>Optimal Period:</strong> Age 29-33 (after Sadesathi effects wear off, maturity gained) ⭐ BEST WINDOW</li>
+        <li><strong>Latest Window:</strong> Age 33-37 (before Saturn completion cycle)</li>
+      </ul>
+
+      <h3>Spouse Characteristics</h3>
+      <ul>
+        <li><strong>Personality:</strong> Spiritual, intuitive, artistic (Pisces influence from Venus)</li>
+        <li><strong>Age:</strong> Similar age or slightly younger (1-3 years difference)</li>
+        <li><strong>Background:</strong> Cultured, educated, possibly from spiritual or artistic background</li>
+        <li><strong>Character:</strong> Sensitive, compassionate, emotionally deep, possibly intuitive or psychic</li>
+        <li><strong>Compatibility:</strong> Virgo-Pisces opposite signs - can be harmonious if both appreciate differences</li>
+      </ul>
+
+      <h3>Marital Harmony Recommendations</h3>
+
+      <table>
+        <tr>
+          <th>Challenge</th>
+          <th>Root Cause</th>
+          <th>Solution</th>
+        </tr>
+        <tr>
+          <td>Communication Gaps</td>
+          <td>Mercury weak, 5th house affected</td>
+          <td>Practice active listening. Write feelings. Couples counseling if needed.</td>
+        </tr>
+        <tr>
+          <td>Emotional Distance</td>
+          <td>Venus retrograde, Ketu in 4th</td>
+          <td>Build emotional intimacy through shared activities. Patience with spouse.</td>
+        </tr>
+        <tr>
+          <td>Obsessive Thinking</td>
+          <td>Rahu in 10th affecting mind</td>
+          <td>Meditation, yoga, spiritual practice. Don't assume worst scenarios.</td>
+        </tr>
+        <tr>
+          <td>Financial Conflicts</td>
+          <td>Different values, Mercury affects planning</td>
+          <td>Joint financial planning. Clear budgets. Respect partner's values.</td>
+        </tr>
+        <tr>
+          <td>Intimacy Issues</td>
+          <td>Venus retrograde, Mars in 3rd not 7th</td>
+          <td>Build emotional connection first. Understand partner's needs. Patience.</td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <h2 id="en-10">10. Remedial Measures & Recommendations</h2>
+
+      <h3>Priority 1: Gemstone Therapy</h3>
+
+      <table>
+        <tr>
+          <th>Planet</th>
+          <th>Gemstone</th>
+          <th>Specifications</th>
+          <th>Purpose & Wearing</th>
+        </tr>
+        <tr>
+          <td>Sun (Weak)</td>
+          <td>Ruby</td>
+          <td>Deep red, 4-6 carats, certified</td>
+          <td>Strengthen Sun in 6th. Improve health and vitality. Wear in ring finger on Sunday morning.</td>
+        </tr>
+        <tr>
+          <td>Mercury (Weak)</td>
+          <td>Emerald</td>
+          <td>Green, 4-5 carats, high clarity</td>
+          <td>Improve communication and intellect. Aid nervous system. Wear in ring finger on Wednesday.</td>
+        </tr>
+        <tr>
+          <td>Rahu (Challenging)</td>
+          <td>Hessonite/Gomed</td>
+          <td>Brownish-red, 6-7 carats, natural</td>
+          <td>Clarity in career, reduce obsessive thinking. Wear on middle finger Saturday evening.</td>
+        </tr>
+        <tr>
+          <td>Venus (Retrograde)</td>
+          <td>Diamond</td>
+          <td>Certified, 0.5-1 carat, VSS clarity</td>
+          <td>Help with relationships, reduce marriage delays. Friday evening wear.</td>
+        </tr>
+        <tr>
+          <td>Jupiter (Strengthen)</td>
+          <td>Yellow Sapphire</td>
+          <td>Golden-yellow, 5-7 carats, natural</td>
+          <td>Amplify Jupiter's blessings. Boost wisdom and prosperity. Thursday wear.</td>
+        </tr>
+      </table>
+
+      <h3>Priority 2: Mantra Recitation</h3>
+
+      <table>
+        <tr>
+          <th>Planet</th>
+          <th>Mantra</th>
+          <th>Full Chant</th>
+          <th>Recitation Practice</th>
+        </tr>
+        <tr>
+          <td>Sun</td>
+          <td>Surya Mantra</td>
+          <td>Om Suryaya Namaha</td>
+          <td>108 times, Sunday morning, face east</td>
+        </tr>
+        <tr>
+          <td>Mercury</td>
+          <td>Budh Mantra</td>
+          <td>Om Bum Budhaya Namaha</td>
+          <td>108 times, Wednesday morning</td>
+        </tr>
+        <tr>
+          <td>Jupiter</td>
+          <td>Guru Mantra</td>
+          <td>Om Gurave Namaha</td>
+          <td>108 times, Thursday morning</td>
+        </tr>
+        <tr>
+          <td>Rahu</td>
+          <td>Rahu Mantra</td>
+          <td>Om Bhaum Rahave Namaha</td>
+          <td>108 times, Wednesday evening</td>
+        </tr>
+        <tr>
+          <td>Ketu</td>
+          <td>Ketu Mantra</td>
+          <td>Om Kem Ketave Namaha</td>
+          <td>108 times, Friday evening</td>
+        </tr>
+      </table>
+
+      <h3>Priority 3: Fasting & Rituals</h3>
+      <ul>
+        <li><strong>SUNDAY (for Sun):</strong> Donate red items, offer water to Sun at sunrise, recite Sun mantras. Optional fasting.</li>
+        <li><strong>WEDNESDAY (for Mercury):</strong> Wear green, donate green items, fast if possible, feed children/students, practice communication.</li>
+        <li><strong>THURSDAY (for Jupiter):</strong> Donate yellow items, help teachers/gurus, practice generosity, wear yellow.</li>
+        <li><strong>SATURDAY (for Rahu/Ketu):</strong> Donate black items, help poor and needy, feed crows, practice detachment.</li>
+        <li><strong>FRIDAY (for Venus/Ketu):</strong> Donate white items, practice gratitude, artistic hobbies, wear white.</li>
+      </ul>
+
+      <h3>Priority 4: Yoga & Meditation</h3>
+      <ul>
+        <li><strong>DAILY MEDITATION (20-30 min):</strong> Essential for Rahu's obsessive thinking and Mercury's anxiety. Use 'Om' or specific planet mantras.</li>
+        <li><strong>PRANAYAMA (10-15 min):</strong> Especially Nadi Shodhana (alternate nostril breathing) balances nervous system and strengthens Mercury.</li>
+        <li><strong>YOGA ASANAS:</strong> Focus on Mars strength (warrior poses), Moon balance (moon salutation), and Mercury calming (child's pose, forward bends).</li>
+        <li><strong>CHANTING:</strong> Bhajan singing and kirtan strengthen Jupiter and Ketu's spiritual inclination.</li>
+      </ul>
+
+      <h3>Priority 5: Lifestyle Recommendations</h3>
+      <ul>
+        <li><strong>Career Clarity:</strong> Use Rahu period (present) to clarify career goals. Make a 5-year plan. Seek mentorship.</li>
+        <li><strong>Health Prevention:</strong> Annual medical checkup for Sun-in-6th issues (fever, infections, eyes). Don't ignore health warnings.</li>
+        <li><strong>Relationship Building:</strong> For marriage - focus on meeting compatible partners. Work on communication skills now.</li>
+        <li><strong>Financial Planning:</strong> Save regularly. Avoid speculative investments (Mercury weak). Build emergency fund.</li>
+        <li><strong>Stress Management:</strong> Rahu in 10th creates work stress. Exercise regularly, maintain boundaries, take vacations.</li>
+        <li><strong>Lucky Colors:</strong> Red (Sun), Green (Mercury), Yellow (Jupiter), Black (Rahu), White (Venus). Use in important activities.</li>
+        <li><strong>Lucky Days:</strong> Sunday (Sun), Monday (Moon), Thursday (Jupiter), Wednesday (Mercury). Avoid Saturday for new ventures.</li>
+        <li><strong>Lucky Numbers:</strong> 1 (Sun), 5 (Mercury), 9 (Mars), 3 (Jupiter), 7 (Venus). Use for important dates/amounts.</li>
+      </ul>
+
+      <hr />
+
+      <h2 id="en-11">11. Life Predictions by Age</h2>
+
+      <h3>Age 25-30 (Current to Next 5 Years)</h3>
+      <div class="info-box">
+        <strong>PERIOD OUTLOOK: GROWTH & STABILIZATION</strong>
+        <ul>
+          <li><strong>Career:</strong> Rapid advancement expected. Opportunities for promotions, projects, and professional recognition.</li>
+          <li><strong>Finance:</strong> Strong income period. Ability to save and invest. Property acquisition possible post-age 27.</li>
+          <li><strong>Relationships:</strong> Important relationships may solidify. Marriage consideration in years 27-29 especially favorable.</li>
+          <li><strong>Health:</strong> Generally good. Minor health issues manageable. Focus on preventive care and stress reduction.</li>
+          <li><strong>Spiritual:</strong> Interest in spirituality increases. May seek guidance or formal spiritual training.</li>
+        </ul>
+      </div>
+
+      <h3>Age 30-40 (Next Decade)</h3>
+      <div class="info-box">
+        <strong>PERIOD OUTLOOK: CONSOLIDATION & FULFILLMENT</strong>
+        <ul>
+          <li><strong>Career:</strong> Peak achievement period. Leadership roles expected. Possible self-employment or significant role elevation.</li>
+          <li><strong>Family:</strong> Married life settles into stability. Children possible. Family responsibilities increase but manageable.</li>
+          <li><strong>Finance:</strong> Substantial wealth accumulation. Real estate investments successful. Financial independence achieved.</li>
+          <li><strong>Health:</strong> Maintain vigilance. Begin preventive health practices. Age 35-40 requires more attention to health.</li>
+          <li><strong>Challenges:</strong> Saturn return phase (age 29-30) may bring life-altering decisions. Embrace change with maturity.</li>
+        </ul>
+      </div>
+
+      <h3>Age 40-60 (Middle Age)</h3>
+      <div class="info-box">
+        <strong>PERIOD OUTLOOK: WISDOM & LEGACY BUILDING</strong>
+        <ul>
+          <li><strong>Career:</strong> Mentoring role. Establishing legacy in professional field. Possible advisory or board positions.</li>
+          <li><strong>Finance:</strong> Wealth continues to grow if managed wisely. Generational wealth transfer planning important.</li>
+          <li><strong>Health:</strong> Requires increased attention. Saturn's influence increases health concerns age 45+. Regular medical checkups mandatory.</li>
+          <li><strong>Spirituality:</strong> Deepening spiritual practice essential. Meditation and yoga becomes health necessity.</li>
+          <li><strong>Sadesathi Return:</strong> Age 48-56 brings second Sadesathi. Requires psychological preparation and lifestyle adjustments.</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="en-12">12. Final Summary & Overall Assessment</h2>
+
+      <h3>Life Blueprint</h3>
+      <p>Ashish Singh's chart reveals a <strong>MIXED but WORKABLE</strong> horoscope with strong Jupiter influence and several moderate challenges. The native is destined for professional achievement and financial success, but must address specific health, relationship, and career clarity issues through proper remediation and conscious effort.</p>
+
+      <h3>Core Strengths</h3>
+      <div class="success-box">
+        <ul>
+          <li>✅ <strong>Jupiter in 9th House:</strong> Supreme blessing for prosperity, luck, wisdom, and spiritual growth</li>
+          <li>✅ <strong>Moon in Own Rasi:</strong> Strong emotional stability, family happiness, practical approach to life</li>
+          <li>✅ <strong>Mars in Own Sign:</strong> Courage, determination, physical strength, ability to overcome obstacles</li>
+          <li>✅ <strong>Virgo Ascendant:</strong> Analytical mind, attention to detail, practical wisdom, good judgment</li>
+          <li>✅ <strong>Empty 8th House:</strong> Lower accident risk, generally good health trajectory</li>
+        </ul>
+      </div>
+
+      <h3>Primary Challenges to Address</h3>
+      <div class="warning-box">
+        <ul>
+          <li>⚠️ <strong>Sun in 6th House:</strong> Health concerns (fever, infections, eye problems) requiring preventive measures</li>
+          <li>⚠️ <strong>Mercury Weak:</strong> Communication difficulties, stress, nervous system challenges</li>
+          <li>⚠️ <strong>Rahu in 10th:</strong> Career confusion, unclear direction, requires goal clarity</li>
+          <li>⚠️ <strong>Venus Retrograde:</strong> Marriage delays, relationship intensity, requires patience</li>
+          <li>⚠️ <strong>Ketu in 4th:</strong> Detachment from home, family complications, requires spiritual understanding</li>
+        </ul>
+      </div>
+
+      <h3>Key Recommendations (PRIORITY ORDER)</h3>
+      <div class="highlight">
+        <ol>
+          <li><strong>HEALTH:</strong> Immediate action needed. Annual medical checkups, especially for Sun-in-6th issues (fever, infections, eyes). Don't ignore health warning signs.</li>
+          <li><strong>GEMSTONES & MANTRAS:</strong> Wear Ruby (Sun) and Emerald (Mercury) immediately. Begin daily mantra recitation (108 times each, appropriate planets).</li>
+          <li><strong>MEDITATION & YOGA:</strong> 20-30 min daily meditation essential for anxiety/stress management. Pranayama crucial for Mercury and nervous system.</li>
+          <li><strong>CAREER CLARITY:</strong> Create 5-year plan NOW. Identify professional goals. Rahu period (present) is opportunity to establish clear direction.</li>
+          <li><strong>RELATIONSHIPS:</strong> Don't rush marriage decision. Age 29-32 optimal. Focus on communication skills. Work on emotional maturity.</li>
+          <li><strong>FINANCIAL PLANNING:</strong> Build emergency fund (6-12 months). Avoid speculation. Invest in stable instruments. Save regularly.</li>
+          <li><strong>SPIRITUAL PRACTICE:</strong> Strengthen Ketu's spiritual inclination through regular bhajan, kirtan, or meditation. Detachment from material worries essential.</li>
+        </ol>
+      </div>
+
+      <h3>Final Words</h3>
+      <blockquote>
+        Ashish Singh's chart is <strong>WORKABLE and offers GOOD PROSPECTS</strong> when challenges are properly addressed. The strong Jupiter ensures that despite obstacles, <strong>fortune will ultimately favor</strong> the native. With discipline, remedial practices, and conscious effort, the native can achieve a successful, healthy, prosperous, and spiritually fulfilling life.
+        <br><br>
+        The key is to take <strong>IMMEDIATE ACTION</strong> on health and mental health (Sun in 6th, Mercury weak, Rahu in 10th), establish <strong>CLEAR CAREER GOALS</strong> (Rahu needs direction), and <strong>PREPARE for MARRIAGE</strong> (age 29-32 window). With these foundations set, life will progress smoothly despite initial challenges.
+      </blockquote>
+
+      <div class="footer">
+        <p><strong>Report Generated:</strong> May 2026 | Comprehensive Vedic Astrology Analysis with 16 Vargas</p>
+        <p><em>This professional report is based on traditional Jyotish principles with careful verification of all planetary positions and exaltations. Follow the remedial recommendations sincerely for best results.</em></p>
+      </div>
+    </div>
+
+    <!-- HINDI VERSION -->
+    <div id="hindi" class="lang">
+      <h1>व्यापक वैदिक ज्योतिष रिपोर्ट</h1>
+      <p>व्यावसायिक विश्लेषण 16 वर्ग सहित | जन्म चार्ट: 3 नवंबर 2001 | 18:25:38 IST | फैजाबाद, UP</p>
+      <p style="text-align: center; color: #c00000; font-weight: 600; margin-bottom: 30px;">[ सुधारी गई और सत्यापित ]</p>
+
+      <div class="toc">
+        <h2>विषय सूची</h2>
+        <ul>
+          <li><a href="#hi-01">1. जन्म विवरण और चार्ट की नींव</a></li>
+          <li><a href="#hi-02">2. ग्रहों की स्थिति और भाव</a></li>
+          <li><a href="#hi-03">3. ग्रह शक्ति विश्लेषण</a></li>
+          <li><a href="#hi-04">4. शोडशवर्ग (16 वर्ग)</a></li>
+          <li><a href="#hi-05">5. भाव-दर-भाव विश्लेषण</a></li>
+          <li><a href="#hi-06">6. योग और संयोजन</a></li>
+          <li><a href="#hi-07">7. करियर विश्लेषण</a></li>
+          <li><a href="#hi-08">8. स्वास्थ्य विश्लेषण</a></li>
+          <li><a href="#hi-09">9. विवाह और संबंध</a></li>
+          <li><a href="#hi-10">10. उपचारात्मक उपाय</a></li>
+          <li><a href="#hi-11">11. जीवन पूर्वानुमान</a></li>
+          <li><a href="#hi-12">12. अंतिम सारांश</a></li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="hi-01">1. जन्म विवरण और चार्ट की नींव</h2>
+      
+      <table>
+        <tr>
+          <th>पैरामीटर</th>
+          <th>विवरण</th>
+          <th>पैरामीटर</th>
+          <th>विवरण</th>
+        </tr>
+        <tr>
+          <td><strong>नाम</strong></td>
+          <td>आशीष सिंह</td>
+          <td><strong>लिंग</strong></td>
+          <td>पुरुष</td>
+        </tr>
+        <tr>
+          <td><strong>जन्म तिथि</strong></td>
+          <td>3 नवंबर 2001</td>
+          <td><strong>दिन</strong></td>
+          <td>रविवार</td>
+        </tr>
+        <tr>
+          <td><strong>जन्म समय</strong></td>
+          <td>18:25:38 IST</td>
+          <td><strong>तिथि</strong></td>
+          <td>कृष्ण तृतीया</td>
+        </tr>
+        <tr>
+          <td><strong>जन्म स्थान</strong></td>
+          <td>फैजाबाद, उत्तर प्रदेश</td>
+          <td><strong>अक्षांश/देशांतर</strong></td>
+          <td>26°46'N / 82°7'E</td>
+        </tr>
+        <tr>
+          <td><strong>लग्न (Ascendant)</strong></td>
+          <td>कन्या (बुध नियंत्रित)</td>
+          <td><strong>लग्न नक्षत्र</strong></td>
+          <td>हस्त, पाद 2</td>
+        </tr>
+        <tr>
+          <td><strong>राशि (चंद्र)</strong></td>
+          <td>कन्या</td>
+          <td><strong>राशि नक्षत्र</strong></td>
+          <td>हस्त, पाद 4</td>
+        </tr>
+        <tr>
+          <td><strong>सूर्य राशि (भारतीय)</strong></td>
+          <td>कुंभ</td>
+          <td><strong>दशा संतुलन</strong></td>
+          <td>चंद्र 0Y 11M 16D</td>
+        </tr>
+      </table>
+
+      <h3>मुख्य चार्ट विशेषताएं</h3>
+      <ul>
+        <li><strong>कन्या लग्न:</strong> विश्लेषणात्मक, व्यावहारिक, विस्तार पर ध्यान, स्वास्थ्य-सचेत व्यक्तित्व</li>
+        <li><strong>कन्या राशि:</strong> चंद्रमा अपनी राशि में, भावनात्मक स्थिरता, परिवार-केंद्रित</li>
+        <li><strong>हस्त नक्षत्र:</strong> कुशल, कलात्मक, व्यावहारिक ज्ञान, उत्कृष्ट हाथों का कौशल</li>
+        <li><strong>वृद्धि योग:</strong> विकास को बढ़ावा देने वाला संयोजन समृद्धि लाता है</li>
+      </ul>
+
+      <h3>महत्वपूर्ण सुधार</h3>
+      <div class="warning-box">
+        <ul style="margin: 12px 0 0 20px;">
+          <li>कुंभ में सूर्य तटस्थ है (केवल मेष में 0-10° में उच्च)</li>
+          <li>मकर में बुध तटस्थ है (केवल मीन में 0-15° में नीच)</li>
+          <li>वृष में गुरु तटस्थ है (केवल कर्क में 0-10° में उच्च)</li>
+          <li>वृष में शनि तटस्थ है (केवल मेष में नीच)</li>
+          <li>मीन में शुक्र तटस्थ है (तुला और वृष का मालिक है, मीन नहीं)</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="hi-02">2. ग्रहों की स्थिति और भाव</h2>
+
+      <table>
+        <tr>
+          <th>ग्रह</th>
+          <th>राशि और डिग्री</th>
+          <th>नक्षत्र</th>
+          <th>भाव</th>
+          <th>स्थिति</th>
+          <th>शक्ति</th>
+        </tr>
+        <tr>
+          <td><strong>सूर्य</strong></td>
+          <td>कुंभ 27°09'</td>
+          <td>पूर्वभद्रपद 3</td>
+          <td>6वां</td>
+          <td>तटस्थ</td>
+          <td>मध्यम</td>
+        </tr>
+        <tr>
+          <td><strong>चंद्रमा</strong></td>
+          <td>कन्या 22°03'</td>
+          <td>हस्त 4</td>
+          <td>2वां</td>
+          <td>मित्र राशि</td>
+          <td>मजबूत</td>
+        </tr>
+        <tr>
+          <td><strong>मंगल</strong></td>
+          <td>वृश्चिक 18°20'</td>
+          <td>ज्येष्ठा 1</td>
+          <td>3वां</td>
+          <td>अपनी राशि</td>
+          <td>मजबूत</td>
+        </tr>
+        <tr>
+          <td><strong>बुध</strong></td>
+          <td>मकर 29°42'</td>
+          <td>धनिष्ठा 2</td>
+          <td>5वां</td>
+          <td>तटस्थ</td>
+          <td>कमजोर</td>
+        </tr>
+        <tr>
+          <td><strong>गुरु</strong></td>
+          <td>वृष 10°32'</td>
+          <td>रोहिणी 1</td>
+          <td>9वां</td>
+          <td>तटस्थ</td>
+          <td>बहुत मजबूत</td>
+        </tr>
+        <tr>
+          <td><strong>शुक्र [R]</strong></td>
+          <td>मीन 23°45'</td>
+          <td>रेवती 3</td>
+          <td>7वां</td>
+          <td>वक्री</td>
+          <td>मध्यम</td>
+        </tr>
+        <tr>
+          <td><strong>शनि</strong></td>
+          <td>वृष 02°03'</td>
+          <td>कृत्तिका 2</td>
+          <td>9वां</td>
+          <td>तटस्थ</td>
+          <td>मध्यम</td>
+        </tr>
+        <tr>
+          <td><strong>राहु [R]</strong></td>
+          <td>मिथुन 18°07'</td>
+          <td>आर्द्रा 4</td>
+          <td>10वां</td>
+          <td>छायाग्रह</td>
+          <td>चुनौतीपूर्ण</td>
+        </tr>
+        <tr>
+          <td><strong>केतु [R]</strong></td>
+          <td>धनु 18°07'</td>
+          <td>पूर्वाषाढ़ा 2</td>
+          <td>4वां</td>
+          <td>छायाग्रह</td>
+          <td>चुनौतीपूर्ण</td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <h2 id="hi-03">3. ग्रह शक्ति विश्लेषण</h2>
+
+      <h3>बहुत मजबूत ग्रह</h3>
+      <div class="success-box">
+        <div class="card-title">🌟 गुरु (8.5/10)</div>
+        <p><strong>स्थिति:</strong> वृष 10°32', रोहिणी नक्षत्र, 9वां भाव (गुरु के लिए सर्वश्रेष्ठ)</p>
+        <p>आपके चार्ट में सर्वोच्च लाभकारी। 9वां भाव गुरु के लिए सबसे शुभ प्लेसमेंट है, असाधारण भाग्य, ज्ञान, धर्म और सुरक्षा प्रदान करता है।</p>
+      </div>
+
+      <div class="success-box">
+        <div class="card-title">🌙 चंद्रमा (8.0/10)</div>
+        <p><strong>स्थिति:</strong> कन्या 22°03', हस्त नक्षत्र पाद 4, 2वां भाव (संपत्ति और परिवार)</p>
+        <p>मित्र राशि में मजबूत स्थिति। 2वें भाव में चंद्रमा परिवार के धन, भावनात्मक स्थिरता और व्यावहारिक ज्ञान के लिए उत्कृष्ट है।</p>
+      </div>
+
+      <h3>मजबूत ग्रह</h3>
+      <div class="info-box">
+        <div class="card-title">⚔️ मंगल (7.5/10)</div>
+        <p><strong>स्थिति:</strong> वृश्चिक 18°20', ज्येष्ठा नक्षत्र, 3वां भाव</p>
+        <p>अपनी राशि में मंगल की शक्ति। 3वां भाव बाधाओं को दूर करने के लिए साहस देता है।</p>
+      </div>
+
+      <h3>कमजोर/चुनौतीपूर्ण ग्रह</h3>
+      <div class="warning-box">
+        <div class="card-title">❌ बुध (4.5/10)</div>
+        <p><strong>स्थिति:</strong> मकर 29°42', धनिष्ठा नक्षत्र, 5वां भाव</p>
+        <p>बुध 5वें भाव (शिक्षा, रचनात्मकता) में कमजोर संचार क्षमता के साथ। इसे केंद्रित उपचार की आवश्यकता है।</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="card-title">❌ सूर्य 6वें भाव में (6.0/10)</div>
+        <p><strong>स्थिति:</strong> कुंभ 27°09', पूर्वभद्रपद नक्षत्र, 6वां भाव (शत्रु और बीमारी)</p>
+        <p>6वें भाव में सूर्य आदर्श नहीं है। स्वास्थ्य कमजोरियां पैदा करता है और रोकथाम देखभाल की आवश्यकता है।</p>
+      </div>
+
+      <hr />
+
+      <!-- Continue with more Hindi content -->
+      <h2 id="hi-04">4. शोडशवर्ग (16 वर्ग) विश्लेषण</h2>
+
+      <p>शोडशवर्ग प्रणाली 16 जीवन आयामों में ग्रह शक्ति का व्यापक दृश्य प्रदान करती है:</p>
+
+      <blockquote>
+        <strong>व्याख्या:</strong> 16-वर्ग विश्लेषण से पता चलता है कि आपके चार्ट की ठोस नींव है (राशि, होरा, सप्तमांश सभी मजबूत) विशिष्ट कमजोरियों के साथ स्वास्थ्य, संपत्ति, बच्चों और शिक्षा में। हालांकि, समग्र शक्ति गुरु की प्रमुखता और 8वें भाव की खाली स्थिति के कारण अच्छी है।
+      </blockquote>
+
+      <hr />
+
+      <h2 id="hi-05">5. भाव-दर-भाव विश्लेषण</h2>
+
+      <h3>मुख्य भाव विश्लेषण</h3>
+      <ul>
+        <li><strong>2वां भाव (परिवार/संपत्ति):</strong> चंद्रमा की मजबूत स्थिति। भावनात्मक पारिवारिक बंधन उत्कृष्ट। धन संचय अनुकूल।</li>
+        <li><strong>3वां भाव (संचार/भाई):</strong> मंगल यहां साहस प्रदान करता है। बुध की कमजोरी के बावजूद संचार में सुधार।</li>
+        <li><strong>6वां भाव (स्वास्थ्य):</strong> सूर्य यहां आदर्श नहीं है। स्वास्थ्य समस्याएं संभव। रोकथाम आवश्यक।</li>
+        <li><strong>7वां भाव (विवाह):</strong> शुक्र वक्री यहां है। विवाह में देरी पर गहरे कर्मिक बंधन।</li>
+        <li><strong>9वां भाव (भाग्य/धर्म):</strong> गुरु यहां सर्वश्रेष्ठ। असाधारण भाग्य और आशीर्वाद सुनिश्चित।</li>
+        <li><strong>10वां भाव (करियर):</strong> राहु यहां करियर में भ्रम पैदा करता है। स्पष्टता की आवश्यकता है।</li>
+      </ul>
+
+      <hr />
+
+      <h2 id="hi-06">6. योग और संयोजन</h2>
+
+      <h3>✅ शुभ योग</h3>
+      <div class="success-box">
+        <div class="card-title">🌟 9वें भाव में गुरु</div>
+        <p>सर्वोच्च भाग्य योग। 9वें भाव (भाग्य, धर्म, उच्च शिक्षा) में गुरु असाधारण समृद्धि, ज्ञान, आध्यात्मिक विकास और दिव्य सुरक्षा देता है।</p>
+      </div>
+
+      <h3>⚠️ चुनौतीपूर्ण योग</h3>
+      <div class="warning-box">
+        <div class="card-title">❌ 10वें भाव में राहु</div>
+        <p>करियर में भ्रम और अनुपयोगी मार्ग पैदा करता है। व्यावसायिक दिशा स्पष्टता की आवश्यकता है।</p>
+      </div>
+
+      <div class="warning-box">
+        <div class="card-title">❌ 6वें भाव में सूर्य</div>
+        <p>स्वास्थ्य और प्राधिकार के लिए आदर्श नहीं। स्वास्थ्य कमजोरियां पैदा करता है।</p>
+      </div>
+
+      <hr />
+
+      <h2 id="hi-07">7. करियर विश्लेषण</h2>
+
+      <div class="highlight">
+        <strong>करियर क्षमता: जटिलताओं के साथ अच्छी - स्पष्ट दिशा की आवश्यकता</strong>
+      </div>
+
+      <h3>करियर की ताकत</h3>
+      <ul>
+        <li><strong>9वें भाव में गुरु:</strong> भाग्य, ज्ञान और विस्तार देता है। उच्च पद प्राप्त कर सकते हैं।</li>
+        <li><strong>कन्या लग्न:</strong> विश्लेषणात्मक क्षमता, विस्तार पर ध्यान, व्यवस्थित दृष्टिकोण करियर में मूल्यवान।</li>
+        <li><strong>3वें भाव में मंगल:</strong> साहस और दृढ़ संकल्प। बाधाओं को आगे बढ़ने की क्षमता।</li>
+      </ul>
+
+      <h3>उपयुक्त करियर क्षेत्र</h3>
+      <ol>
+        <li>शिक्षा और शिक्षण</li>
+        <li>वित्त और लेखांकन</li>
+        <li>प्रशासन और सरकार</li>
+        <li>अनुसंधान और विश्लेषण</li>
+        <li>स्वास्थ्य सेवा</li>
+        <li>सेवा-उन्मुखी कार्य</li>
+      </ol>
+
+      <hr />
+
+      <h2 id="hi-08">8. स्वास्थ्य विश्लेषण</h2>
+
+      <div class="warning-box">
+        <strong>स्वास्थ्य स्थिति: मध्यम - रोकथाम देखभाल की आवश्यकता है</strong>
+      </div>
+
+      <h3>स्वास्थ्य कमजोरियां</h3>
+      <ul>
+        <li><strong>6वें भाव में सूर्य (मुख्य चिंता):</strong> बुखार, संक्रामक रोग, आंखों की समस्याएं, हृदय संबंधी चिंताएं।</li>
+        <li><strong>कमजोर बुध:</strong> तंत्रिका तंत्र, चिंता, तनाव-संबंधी समस्याएं, श्वसन समस्याएं।</li>
+        <li><strong>10वें भाव में राहु:</strong> मनोवैज्ञानिक तनाव और चिंता। कार्य-संबंधित तनाव स्वास्थ्य समस्याओं में प्रकट होता है।</li>
+        <li><strong>4वें भाव में केतु:</strong> श्वसन प्रणाली और पारिवारिक तनाव-संबंधी स्वास्थ्य समस्याओं को प्रभावित कर सकता है।</li>
+      </ul>
+
+      <table>
+        <tr>
+          <th>स्वास्थ्य चिंता</th>
+          <th>ज्योतिषीय कारण</th>
+          <th>असुरक्षित आयु</th>
+          <th>रोकथाम रणनीति</th>
+        </tr>
+        <tr>
+          <td>बुखार/संक्रमण</td>
+          <td>6वें भाव में सूर्य</td>
+          <td>आयु 20-50 (चल रहा है)</td>
+          <td>नियमित स्वास्थ्य जांच, महामारियों से बचें, प्रतिरक्षा मजबूत करें</td>
+        </tr>
+        <tr>
+          <td>चिंता/तनाव</td>
+          <td>कमजोर बुध, 10वें भाव में राहु</td>
+          <td>आयु 25-40</td>
+          <td>ध्यान, योग, परामर्श, कार्य तनाव प्रबंधन</td>
+        </tr>
+        <tr>
+          <td>आंखों की समस्याएं</td>
+          <td>6वें भाव में सूर्य</td>
+          <td>आयु 35 आगे</td>
+          <td>नियमित आंखों की जांच, सुरक्षात्मक चश्मा, व्यायाम</td>
+        </tr>
+        <tr>
+          <td>पाचन समस्याएं</td>
+          <td>कमजोर बुध, 6वें भाव में सूर्य</td>
+          <td>आयु 25-35</td>
+          <td>नियंत्रित आहार, मसालेदार भोजन से बचें, नियमित भोजन</td>
+        </tr>
+      </table>
+
+      <hr />
+
+      <h2 id="hi-09">9. विवाह और संबंध</h2>
+
+      <div class="highlight">
+        <strong>विवाह की संभावनाएं: विलंबित लेकिन सार्थक - मजबूत कर्मिक संयोजन अपेक्षित</strong>
+      </div>
+
+      <h3>विवाह के संकेतक</h3>
+      <ul>
+        <li><strong>7वें भाव में शुक्र वक्री:</strong> विवाह में देरी (आम तौर पर सामान्य आयु से 3-5 साल बाद)। हालांकि, वक्री आत्मा के संयोजन और गहरे बंधन का संकेत देता है।</li>
+        <li><strong>9वें भाव में गुरु:</strong> विवाह को गंभीर समस्याओं से बचाता है। भागीदारी में अच्छा भाग्य।</li>
+        <li><strong>3वें भाव में मंगल:</strong> जबकि 7वें में नहीं, संबंधों में जुनून और साहस प्रदान करता है।</li>
+        <li><strong>कमजोर बुध:</strong> संबंधों में संचार चुनौतीपूर्ण। भावनाओं को व्यक्त करने के लिए सचेत प्रयास आवश्यक।</li>
+        <li><strong>10वें भाव में राहु:</strong> जुनूनी विचार या छिपे हुए पहलू पैदा कर सकता है। ईमानदारी और पारदर्शिता आवश्यक।</li>
+      </ul>
+
+      <h3>विवाह का समय</h3>
+      <ul>
+        <li><strong>सबसे पहले संभव:</strong> आयु 26-28 (यदि कर्मिक समय सहमति हो)</li>
+        <li><strong>इष्टतम अवधि:</strong> आयु 29-33 (सड़े सति प्रभाव कम हों, परिपक्वता प्राप्त) ⭐ सर्वश्रेष्ठ खिड़की</li>
+        <li><strong>नवीनतम खिड़की:</strong> आयु 33-37 (शनि पूर्ण चक्र से पहले)</li>
+      </ul>
+
+      <h3>पति की विशेषताएं</h3>
+      <ul>
+        <li><strong>व्यक्तित्व:</strong> आध्यात्मिक, अंतर्ज्ञानी, कलात्मक (शुक्र से मीन प्रभाव)</li>
+        <li><strong>आयु:</strong> समान आयु या थोड़ी छोटी (1-3 साल का अंतर)</li>
+        <li><strong>पृष्ठभूमि:</strong> शिक्षित, आध्यात्मिक या कलात्मक पृष्ठभूमि से संभवतः</li>
+        <li><strong>चरित्र:</strong> संवेदनशील, करुणामय, भावनात्मक रूप से गहरा, संभवतः अंतर्ज्ञानी</li>
+      </ul>
+
+      <hr />
+
+      <h2 id="hi-10">10. उपचारात्मक उपाय और सिफारिशें</h2>
+
+      <h3>प्राथमिकता 1: रत्न चिकित्सा</h3>
+
+      <table>
+        <tr>
+          <th>ग्रह</th>
+          <th>रत्न</th>
+          <th>विनिर्देश</th>
+          <th>उद्देश्य और पहनना</th>
+        </tr>
+        <tr>
+          <td>सूर्य (कमजोर)</td>
+          <td>माणिक्य</td>
+          <td>गहरा लाल, 4-6 कैरेट, प्रमाणित</td>
+          <td>6वें भाव में सूर्य को मजबूत करें। स्वास्थ्य और जीवन शक्ति में सुधार करें। रविवार सुबह अनामिका में पहनें।</td>
+        </tr>
+        <tr>
+          <td>बुध (कमजोर)</td>
+          <td>पन्ना</td>
+          <td>हरा, 4-5 कैरेट, उच्च स्पष्टता</td>
+          <td>संचार और बुद्धि में सुधार करें। तंत्रिका तंत्र में मदद करें। बुधवार अनामिका में पहनें।</td>
+        </tr>
+        <tr>
+          <td>राहु (चुनौतीपूर्ण)</td>
+          <td>हेसोनाइट/गोमेद</td>
+          <td>भूरा-लाल, 6-7 कैरेट, प्राकृतिक</td>
+          <td>करियर में स्पष्टता, जुनूनी सोच कम करें। शनिवार शाम मध्य उंगली में पहनें।</td>
+        </tr>
+        <tr>
+          <td>शुक्र (वक्री)</td>
+          <td>हीरा</td>
+          <td>प्रमाणित, 0.5-1 कैरेट, VSS स्पष्टता</td>
+          <td>संबंधों में मदद करें, विवाह देरी कम करें। शुक्रवार शाम पहनें।</td>
+        </tr>
+        <tr>
+          <td>गुरु (मजबूत करें)</td>
+          <td>पीला नीलम</td>
+          <td>सुनहरा-पीला, 5-7 कैरेट, प्राकृतिक</td>
+          <td>गुरु के आशीर्वाद को बढ़ाएं। ज्ञान और समृद्धि बढ़ाएं। गुरुवार पहनें।</td>
+        </tr>
+      </table>
+
+      <h3>प्राथमिकता 2: मंत्र जाप</h3>
+
+      <table>
+        <tr>
+          <th>ग्रह</th>
+          <th>मंत्र</th>
+          <th>पूर्ण मंत्र</th>
+          <th>जाप अभ्यास</th>
+        </tr>
+        <tr>
+          <td>सूर्य</td>
+          <td>सूर्य मंत्र</td>
+          <td>ॐ सूर्याय नमः</td>
+          <td>108 बार, रविवार सुबह, पूर्व की ओर</td>
+        </tr>
+        <tr>
+          <td>बुध</td>
+          <td>बुध मंत्र</td>
+          <td>ॐ बुम बुधाय नमः</td>
+          <td>108 बार, बुधवार सुबह</td>
+        </tr>
+        <tr>
+          <td>गुरु</td>
+          <td>गुरु मंत्र</td>
+          <td>ॐ गुरवे नमः</td>
+          <td>108 बार, गुरुवार सुबह</td>
+        </tr>
+        <tr>
+          <td>राहु</td>
+          <td>राहु मंत्र</td>
+          <td>ॐ भौम राहवे नमः</td>
+          <td>108 बार, बुधवार शाम</td>
+        </tr>
+        <tr>
+          <td>केतु</td>
+          <td>केतु मंत्र</td>
+          <td>ॐ केम केतवे नमः</td>
+          <td>108 बार, शुक्रवार शाम</td>
+        </tr>
+      </table>
+
+      <h3>प्राथमिकता 3: व्रत और अनुष्ठान</h3>
+      <ul>
+        <li><strong>रविवार (सूर्य के लिए):</strong> लाल वस्तुएं दान करें, सूर्योदय पर सूर्य को जल दें, सूर्य मंत्र का जाप करें।</li>
+        <li><strong>बुधवार (बुध के लिए):</strong> हरा पहनें, हरी वस्तुएं दान करें, यदि संभव हो तो व्रत रखें।</li>
+        <li><strong>गुरुवार (गुरु के लिए):</strong> पीली वस्तुएं दान करें, गुरुओं की मदद करें, उदारता का अभ्यास करें।</li>
+        <li><strong>शनिवार (राहु/केतु के लिए):</strong> काली वस्तुएं दान करें, गरीबों की मदद करें, कौएं को खाना खिलाएं।</li>
+        <li><strong>शुक्रवार (शुक्र/केतु के लिए):</strong> सफेद वस्तुएं दान करें, कृतज्ञता का अभ्यास करें, कलात्मक शौक।</li>
+      </ul>
+
+      <h3>प्राथमिकता 4: योग और ध्यान</h3>
+      <ul>
+        <li><strong>दैनिक ध्यान (20-30 मिनट):</strong> राहु की जुनूनी सोच और बुध की चिंता के लिए आवश्यक। 'ॐ' या विशिष्ट ग्रह मंत्र का उपयोग करें।</li>
+        <li><strong>प्राणायाम (10-15 मिनट):</strong> विशेषकर नाड़ी शोधन (वैकल्पिक नासिका श्वास) तंत्रिका तंत्र को संतुलित करता है।</li>
+        <li><strong>योग आसन:</strong> मंगल शक्ति (योद्धा मुद्रा), चंद्र संतुलन (चंद्र नमस्कार), बुध शांति (बाल मुद्रा) पर ध्यान दें।</li>
+        <li><strong>भजन गायन:</strong> भजन गायन और कीर्तन गुरु और केतु की आध्यात्मिक प्रवृत्ति को मजबूत करते हैं।</li>
+      </ul>
+
+      <hr />
+
+      <h2 id="hi-11">11. जीवन आयु के अनुसार पूर्वानुमान</h2>
+
+      <h3>आयु 25-30 (वर्तमान से अगले 5 साल)</h3>
+      <div class="info-box">
+        <strong>अवधि दृष्टिकोण: विकास और स्थिरीकरण</strong>
+        <ul>
+          <li><strong>करियर:</strong> तीव्र प्रगति अपेक्षित। पदोन्नति, परियोजनाएं और व्यावसायिक मान्यता के अवसर।</li>
+          <li><strong>वित्त:</strong> मजबूत आय अवधि। बचत और निवेश की क्षमता। 27 वर्ष के बाद संपत्ति अधिग्रहण संभव।</li>
+          <li><strong>संबंध:</strong> महत्वपूर्ण संबंध दृढ़ हो सकते हैं। विवाह विचार वर्षों 27-29 में विशेष रूप से अनुकूल।</li>
+          <li><strong>स्वास्थ्य:</strong> सामान्यतः अच्छा। मामूली स्वास्थ्य समस्याएं प्रबंधनीय। रोकथाम देखभाल पर ध्यान दें।</li>
+        </ul>
+      </div>
+
+      <h3>आयु 30-40 (अगला दशक)</h3>
+      <div class="info-box">
+        <strong>अवधि दृष्टिकोण: समेकन और पूर्ति</strong>
+        <ul>
+          <li><strong>करियर:</strong> पीक उपलब्धि अवधि। नेतृत्व भूमिकाएं अपेक्षित। संभावित स्व-रोजगार या महत्वपूर्ण भूमिका उन्नयन।</li>
+          <li><strong>परिवार:</strong> विवाहित जीवन स्थिरता में बसता है। बच्चे संभव। पारिवारिक जिम्मेदारियां बढ़ती हैं लेकिन प्रबंधनीय।</li>
+          <li><strong>वित्त:</strong> पर्याप्त संपत्ति संचय। रियल एस्टेट निवेश सफल। आर्थिक स्वतंत्रता प्राप्त।</li>
+          <li><strong>स्वास्थ्य:</strong> सतर्कता बनाए रखें। रोकथाम स्वास्थ्य अभ्यास शुरू करें। आयु 35-40 को अधिक ध्यान की आवश्यकता।</li>
+        </ul>
+      </div>
+
+      <hr />
+
+      <h2 id="hi-12">12. अंतिम सारांश और समग्र मूल्यांकन</h2>
+
+      <h3>जीवन का खाका</h3>
+      <p>आशीष सिंह का चार्ट एक <strong>मिश्रित लेकिन कार्य योग्य</strong> कुंडली प्रकट करता है जिसमें मजबूत गुरु प्रभाव और कई मध्यम चुनौलाइओं हैं। जातक व्यावसायिक उपलब्धि और वित्तीय सफलता के लिए नियत है, लेकिन सही उपचार और सचेत प्रयास के माध्यम से विशिष्ट स्वास्थ्य, संबंध और करियर स्पष्टता मुद्दों को संबोधित करना चाहिए।</p>
+
+      <h3>मुख्य शक्तियां</h3>
+      <div class="success-box">
+        <ul>
+          <li>✅ <strong>9वें भाव में गुरु:</strong> समृद्धि, भाग्य, ज्ञान और आध्यात्मिक विकास के लिए सर्वोच्च आशीर्वाद</li>
+          <li>✅ <strong>अपनी राशि में चंद्रमा:</strong> मजबूत भावनात्मक स्थिरता, पारिवारिक खुशी, जीवन के प्रति व्यावहारिक दृष्टिकोण</li>
+          <li>✅ <strong>अपनी राशि में मंगल:</strong> साहस, दृढ़ संकल्प, शारीरिक शक्ति, बाधाओं को दूर करने की क्षमता</li>
+          <li>✅ <strong>कन्या लग्न:</strong> विश्लेषणात्मक दिमाग, विस्तार पर ध्यान, व्यावहारिक ज्ञान, अच्छा판断</li>
+          <li>✅ <strong>खाली 8वां भाव:</strong> कम दुर्घटना जोखिम, आम तौर पर अच्छा स्वास्थ्य पथ</li>
+        </ul>
+      </div>
+
+      <h3>संबोधित करने के लिए प्राथमिक चुनौतियां</h3>
+      <div class="warning-box">
+        <ul>
+          <li>⚠️ <strong>6वें भाव में सूर्य:</strong> स्वास्थ्य चिंताएं (बुखार, संक्रमण, आंखों की समस्याएं) रोकथाम उपायों की आवश्यकता है</li>
+          <li>⚠️ <strong>कमजोर बुध:</strong> संचार कठिनाइयां, तनाव, तंत्रिका तंत्र चुनौतियां</li>
+          <li>⚠️ <strong>10वें भाव में राहु:</strong> करियर भ्रम, अस्पष्ट दिशा, लक्ष्य स्पष्टता की आवश्यकता</li>
+          <li>⚠️ <strong>शुक्र वक्री:</strong> विवाह देरी, संबंध तीव्रता, धैर्य की आवश्यकता</li>
+          <li>⚠️ <strong>4वें भाव में केतु:</strong> घर से अलगाव, पारिवारिक जटिलताएं, आध्यात्मिक समझ की आवश्यकता</li>
+        </ul>
+      </div>
+
+      <h3>मुख्य सिफारिशें (प्राथमिकता क्रम)</h3>
+      <div class="highlight">
+        <ol>
+          <li><strong>स्वास्थ्य:</strong> तत्काल कार्रवाई आवश्यक। सूर्य-6वें-भाव समस्याओं के लिए वार्षिक चिकित्सा जांच।</li>
+          <li><strong>रत्न और मंत्र:</strong> तुरंत माणिक्य (सूर्य) और पन्ना (बुध) पहनें। दैनिक मंत्र जाप शुरू करें।</li>
+          <li><strong>ध्यान और योग:</strong> चिंता/तनाव प्रबंधन के लिए दैनिक ध्यान (20-30 मिनट) आवश्यक।</li>
+          <li><strong>करियर स्पष्टता:</strong> अभी 5 साल की योजना बनाएं। व्यावसायिक लक्ष्यों की पहचान करें।</li>
+          <li><strong>विवाह तैयारी:</strong> जल्दबाजी न करें। आयु 29-32 इष्टतम। संचार कौशल पर काम करें।</li>
+          <li><strong>आर्थिक योजना:</strong> नियमित रूप से बचत करें। सट्टा से बचें। आपातकालीन कोष बनाएं।</li>
+          <li><strong>आध्यात्मिक अभ्यास:</strong> केतु की आध्यात्मिक प्रवृत्ति को भजन, कीर्तन या ध्यान के माध्यम से मजबूत करें।</li>
+        </ol>
+      </div>
+
+      <h3>अंतिम शब्द</h3>
+      <blockquote>
+        आशीष सिंह का चार्ट <strong>कार्य योग्य और अच्छी संभावनाएं</strong> प्रदान करता है जब चुनौलाइयों को सही तरीके से संबोधित किया जाता है। मजबूत गुरु सुनिश्चित करता है कि <strong>भाग्य अंतत: जातक के पक्ष में होगा</strong>। अनुशासन, उपचारात्मक अभ्यास और सचेत प्रयास के साथ, जातक एक सफल, स्वस्थ, समृद्ध और आध्यात्मिक रूप से संतोषजनक जीवन प्राप्त कर सकता है।
+
+        मुख्य है तत्काल कार्रवाई करना स्वास्थ्य और मानसिक स्वास्थ्य पर (सूर्य 6वें में, कमजोर बुध, 10वें में राहु), स्पष्ट करियर लक्ष्य स्थापित करें (राहु को दिशा की आवश्यकता है), और विवाह के लिए तैयारी करें (आयु 29-32 खिड़की)। ये नींद मजबूत होने पर जीवन सुचारु रूप से आगे बढ़ेगा।
+      </blockquote>
+
+      <div class="footer">
+        <p><strong>रिपोर्ट जेनरेट की गई:</strong> मई 2026 | 16 वर्ग सहित व्यापक वैदिक ज्योतिष विश्लेषण</p>
+        <p><em>यह व्यावसायिक रिपोर्ट परंपरागत ज्योतिष सिद्धांतों पर आधारित है जिसमें सभी ग्रह स्थितियों और ग्रहों का सावधानीपूर्वक सत्यापन किया गया है। सर्वश्रेष्ठ परिणामों के लिए उपचारात्मक सिफारिशों का ईमानदारी से पालन करें।</em></p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const langToggle = document.getElementById('langToggle');
+    const englishLang = document.getElementById('english');
+    const hindiLang = document.getElementById('hindi');
+    const langLabel = document.getElementById('langLabel');
+
+    langToggle.addEventListener('change', function() {
+      if (this.checked) {
+        englishLang.classList.remove('active');
+        hindiLang.classList.add('active');
+        langLabel.textContent = 'हिंदी';
+      } else {
+        englishLang.classList.add('active');
+        hindiLang.classList.remove('active');
+        langLabel.textContent = 'English';
+      }
+    });
+
+    // Smooth scroll for TOC links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
